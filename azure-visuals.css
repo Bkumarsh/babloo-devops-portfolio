@@ -1,0 +1,342 @@
+:root {
+  --azure: #4aa9ff;
+  --azure-bright: #83d5ff;
+  --azure-soft: #4aa9ff1c;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 75% 4%, #176bb333, transparent 34rem),
+    radial-gradient(ellipse at 8% 38%, #12416b24, transparent 31rem),
+    var(--bg);
+}
+
+header {
+  background: #080d19d9;
+  border-bottom-color: #52718d38;
+}
+
+.hero {
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: 18px -8vw 34px;
+  content: "";
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse at 77% 49%, #0879c326, transparent 36%),
+    linear-gradient(#73c9ff0a 1px, transparent 1px),
+    linear-gradient(90deg, #73c9ff0a 1px, transparent 1px);
+  background-size: auto, 52px 52px, 52px 52px;
+  mask-image: linear-gradient(90deg, transparent, #000 28%, #000 85%, transparent);
+}
+
+.hero::after {
+  position: absolute;
+  z-index: -1;
+  top: 12%;
+  right: -9%;
+  width: 430px;
+  height: 430px;
+  content: "";
+  border: 1px solid #61beff12;
+  border-radius: 50%;
+  box-shadow: 0 0 0 38px #61beff08, 0 0 0 82px #61beff05;
+  pointer-events: none;
+}
+
+.eyebrow {
+  color: #83d5ff;
+}
+
+.eyebrow i {
+  box-shadow: 0 0 16px #71e9bc;
+}
+
+h1 {
+  text-wrap: balance;
+}
+
+.lead {
+  font-size: 15px;
+}
+
+.btn,
+.contact-link,
+.inline,
+nav a,
+.contacts > a {
+  transition: color 180ms ease, border-color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.btn:not(.primary):hover {
+  border-color: #83d5ff88;
+  background: #4aa9ff12;
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: linear-gradient(110deg, #76dcff, #52b7ff);
+  box-shadow: 0 8px 26px #2099e52e;
+}
+
+.primary:hover {
+  background: linear-gradient(110deg, #a2e8ff, #70c8ff);
+  transform: translateY(-2px);
+}
+
+.pills span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 9px;
+  border: 1px solid #8bcfff1c;
+  border-radius: 999px;
+  background: #0e1b2b99;
+}
+
+.tech-icon {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  color: #83d5ff;
+}
+
+.azure-mark,
+.terraform-mark {
+  fill: currentColor;
+}
+
+.kube-mark {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.docker-mark {
+  fill: currentColor;
+}
+
+.pipeline-mark {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.stats strong {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stats .tech-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.brand-icon {
+  width: 23px;
+  height: 23px;
+  color: currentColor;
+}
+
+.azure-logo .brand-icon,
+.terraform-logo .brand-icon,
+.pipeline-logo .brand-icon {
+  fill: currentColor;
+}
+
+.container-logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.container-logos .brand-icon {
+  width: 19px;
+  height: 19px;
+}
+
+.container-logos .docker-mark {
+  color: #75caff;
+}
+
+.visual {
+  filter: drop-shadow(0 24px 60px #03142666);
+}
+
+.orbit {
+  border-color: #58baff26;
+  box-shadow: inset 0 0 42px #1a8bc00a, 0 0 56px #1688c414;
+}
+
+.console {
+  border-color: #7bc9ff40;
+  background:
+    linear-gradient(140deg, #142b43f2, #0b1423f5),
+    var(--panel);
+  box-shadow: 0 30px 90px #0008, 0 0 42px #158bd71a;
+  backdrop-filter: blur(14px);
+}
+
+.console-head {
+  align-items: center;
+}
+
+.console-head > span {
+  color: #ff777c;
+  letter-spacing: 2px;
+}
+
+.cloud {
+  color: var(--azure-bright);
+  text-shadow: 0 0 28px #43b9ff70;
+}
+
+.flow b {
+  border-color: #62bbf333;
+  background: linear-gradient(145deg, #173754aa, #101c2c);
+}
+
+.status {
+  color: #b6c8dc;
+}
+
+.float {
+  border-color: #70c9ff55;
+  background: #11253aeb;
+  box-shadow: 0 12px 32px #0006, 0 0 24px #208fd51a;
+}
+
+.strip {
+  border-color: #52718d38;
+  background: linear-gradient(90deg, #0e1a2a, #10243a88, #0e1a2a);
+}
+
+.section {
+  scroll-margin-top: 85px;
+}
+
+.shade {
+  background:
+    radial-gradient(ellipse at 82% 0%, #14578a12, transparent 45%),
+    #101b2a70;
+  border-color: #52718d38;
+}
+
+.stats article,
+.cards article,
+.project,
+.timeline article > div,
+.contacts > a {
+  box-shadow: 0 12px 30px #00000012;
+}
+
+.cards article:hover,
+.project:hover {
+  border-color: #65c5ff78;
+  box-shadow: 0 18px 38px #02091355, 0 0 24px #278ed214;
+}
+
+.symbol {
+  border: 1px solid #5ec8ff22;
+  box-shadow: inset 0 1px #ffffff0a;
+}
+
+.art {
+  background:
+    radial-gradient(ellipse at 52% 100%, #1685af4a, transparent 67%),
+    linear-gradient(145deg, #13263c, #0d1829);
+}
+
+.art2 {
+  background:
+    radial-gradient(ellipse at 80% 100%, #6749a544, transparent 65%),
+    linear-gradient(145deg, #151d33, #0d1526);
+}
+
+.art3 {
+  background:
+    radial-gradient(ellipse at 15% 100%, #1d917d44, transparent 60%),
+    linear-gradient(145deg, #122b31, #0d1828);
+}
+
+.architecture b {
+  border-color: #67c8ff55;
+  background: linear-gradient(145deg, #12304a, #102033);
+  box-shadow: 0 6px 18px #0003;
+}
+
+.timeline {
+  border-left-color: #5bc4ff66;
+}
+
+.timeline article > div {
+  background: linear-gradient(145deg, #14243a, #101a2a);
+}
+
+.timeline article:before {
+  box-shadow: 0 0 14px #4ccaff66;
+}
+
+.freelance {
+  border-color: #5dbdff45;
+  background:
+    radial-gradient(ellipse at 0% 100%, #167caf30, transparent 60%),
+    linear-gradient(140deg, #12243a, #101b2b);
+  box-shadow: 0 24px 60px #0002;
+}
+
+.service-list p {
+  border-bottom-color: #6b8aa633;
+}
+
+.contacts > a:hover {
+  transform: translateY(-3px);
+  border-color: #65c5ff78;
+  background: #14283d;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--azure-bright);
+  outline-offset: 4px;
+}
+
+@media (max-width: 620px) {
+  .hero::before {
+    inset: 0 -18px 14px;
+    background-size: auto, 40px 40px, 40px 40px;
+  }
+
+  .hero::after {
+    top: 37%;
+    right: -45%;
+    width: 320px;
+    height: 320px;
+  }
+
+  .strip {
+    background: #0e1a2a;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
